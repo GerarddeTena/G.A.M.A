@@ -40,6 +40,7 @@ const stateOfComponents = ({getTheStore, setStore}) => {
                     const newUser = await registerUserRequests(userData);
                     const store = getTheStore();
                     setStore({...store, users: { ...store.users, register_user: newUser }});
+                    return newUser;
 
                 } catch (error) {
                     console.error({'Error registering user': error});

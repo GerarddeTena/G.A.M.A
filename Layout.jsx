@@ -1,4 +1,4 @@
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes, useLocation} from "react-router-dom";
 import {useState, useEffect, useContext} from "react";
 import ProjectSlogan from "./src/views/ProjectEslogan.jsx";
 import AboutUs from "./src/views/AboutUs.jsx";
@@ -11,11 +11,13 @@ import Signup from "./src/views/SignUp&LogIn_Profile/SignUp.jsx";
 import InjectContext, {Context} from "./src/store/AppContext.jsx";
 import SignIn from "./src/views/SignUp&LogIn_Profile/SignIn.jsx";
 import User_Profile from "./src/views/SignUp&LogIn_Profile/User_Profile.jsx";
+import PhaserConfig from "./src/src_Phaser/GameConfig/PhaserConfig.jsx";
 //Navigate
 
 
 // eslint-disable-next-line react-refresh/only-export-components
 const Layout = () => {
+
     const [isVisible, setIsVisible] = useState(true);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     //const {store} = useContext(Context);
@@ -65,6 +67,7 @@ const Layout = () => {
                 <Route path='/player-info-cyborg' element={<Cyborg />}/>
                 <Route path='/player-info-reptile' element={<Reptile />} />
                 <Route path='/user-profile' element={<User_Profile />}/>
+                <Route path='/game' element={<PhaserConfig />} />
             </Routes>
         </BrowserRouter>
     )

@@ -52,6 +52,7 @@ const Navbar = ({isVisible, toggleNavbar}) => {
                         <Link to={'/about-us'} className='link'>About</Link>
                         <Link to={'/player-lab-create'} className='link'>Players Lab</Link>
                         <Link to={'/user-profile'} className='link'>User Profile</Link>
+                        <Link to={'/game'} className='link'>Game</Link>
                     </ul>
                 </div>}
         </nav>

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import EditProfileForm from './EditProfileForm.jsx';
-import "../../styles/views_Styles/StylesUserProfiles.css";
 
 const UserProfile = () => {
     const [user, setUser] = useState({});

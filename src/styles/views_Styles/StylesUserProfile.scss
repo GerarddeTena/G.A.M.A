@@ -1,0 +1,88 @@
+.user-profile {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  
+    &__background {
+      width: 100%;
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+    }
+  
+    &__content {
+      position: relative;
+      padding: 20px;
+      text-align: center;
+  
+      &__avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-top: -75px;
+        border: 5px solid #fff;
+      }
+  
+      &__username {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 10px;
+        color: #333;
+      }
+  
+      &__email {
+        font-size: 16px;
+        color: #666;
+        margin: 5px 0;
+      }
+  
+      &__bio {
+        font-size: 16px;
+        color: #666;
+        margin: 5px 0;
+      }
+  
+      &__stats {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+  
+        &__stat {
+          text-align: center;
+  
+          &-value {
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+          }
+  
+          &-label {
+            font-size: 14px;
+            color: #888;
+          }
+        }
+      }
+  
+      &__edit-button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+  

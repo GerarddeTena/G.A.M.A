@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../../styles/views_Styles/StylesEditProfileForm.scss';
 
 const EditProfileForm = ({ user, onSave }) => {
     const [formData, setFormData] = useState(user);

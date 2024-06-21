@@ -11,7 +11,7 @@ from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_requir
 api = Blueprint('api', __name__)
 
 # Allow CORS requests to this API
-CORS(api, resources={r"/api/*": {"origins": "*"}})
+CORS(api, resources={r"/api/*": {"origins": "*", "allow_headers": ["Content-Type", "Authorization", "X-Requested-With"]}})
 
 
 @api.route('/register', methods=['POST'])

@@ -1,10 +1,12 @@
-const serverURL = import.meta.env.VITE_APP_CODESPACE_NAME ? `https://${import.meta.env.VITE_APP_CODESPACE_NAME}-3001.app.github.dev/api` : 'localhost:3001';
+const serverURL = import.meta.env.VITE_APP_CODESPACE_NAME != 'undefined' ? `https://${import.meta.env.VITE_APP_CODESPACE_NAME}-3001.app.github.dev/api` : 'http://localhost:3001/api';
 
 export const registerUserRequests = async (userData) => {
+    console.log('serverURL:', serverURL)
     const response = await fetch(`${serverURL}/register`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(userData)
+        body: JSON.stringify(userData),
+        mode: 'cors'
     });
 
     if (!response.ok) {

@@ -1,4 +1,4 @@
-const serverURL = import.meta.env.VITE_APP_CODESPACE_NAME ? `https://${import.meta.env.VITE_APP_CODESPACE_NAME}-3001.app.github.dev/api` : 'localhost:3001';
+const serverURL = import.meta.env.VITE_APP_CODESPACE_NAME != 'undefined' ? `https://${import.meta.env.VITE_APP_CODESPACE_NAME}-3001.app.github.dev/api` : 'https://localhost:3001';
 
 export const registerUserRequests = async (userData) => {
     const response = await fetch(`${serverURL}/register`, {
